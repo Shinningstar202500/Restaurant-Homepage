@@ -263,25 +263,29 @@
     <section>
       <div class="flex justify-center items-center w-full relative">
         <svg
-          class="w-[600px] h-[620px] max-lg:w-[400px] max-lg:h-[420px] max-[500px]:w-[280px] max-[500px]:h-[300px]"
+          class="w-[600px] h-[620px] max-lg:w-[400px] max-lg:h-[420px] max-[500px]:w-[280px] max-[500px]:h-[300px] group"
           viewBox="0 0 600 600"
         >
           <!-- 1️⃣ Clip path for circular image -->
           <defs>
             <clipPath id="circleClip">
-              <!-- Image circle radius = 275px -->
+              <!-- Image circle radius = 250px -->
               <circle cx="300" cy="300" r="250" />
             </clipPath>
           </defs>
 
-          <!-- 2️⃣ Image -->
-          <image
-            href="./TempImage/6.jpg"
-            width="1000"
-            height="800"
-            clip-path="url(#circleClip)"
-            class="object-cover"
-          />
+          <!-- 2️⃣ Image with hover scale effect -->
+          <g clip-path="url(#circleClip)">
+            <image
+              href="./TempImage/6.jpg"
+              width="1000"
+              height="800"
+              class="object-cover transition-transform duration-700 ease-in-out group-hover:scale-125"
+              transform-origin="300 300"
+              x="-50"
+              y="-40"
+            />
+          </g>
 
           <!-- 3️⃣ Text path (radius 280px, 5px away from image) -->
           <defs>
@@ -321,6 +325,8 @@
         </div>
       </div>
     </section>
+
+    <div class="my-[30px] md:my-[60px] border-b border-[smooth-gray]"></div>
 
     <!-- Store Information Section -->
     <section class="py-16 bg-gray-50">
