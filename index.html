@@ -28,6 +28,19 @@
         },
       };
     </script>
+    <style>
+      @keyframes spin-slow {
+        0% {
+          transform: rotate(170deg);
+        }
+        100% {
+          transform: rotate(530deg);
+        }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 40s linear infinite;
+      }
+    </style>
   </head>
   <body class="bg-white text-nature-color font-Mincho">
     <!-- Main Navigation -->
@@ -247,17 +260,17 @@
     <div class="my-[30px] md:my-[60px] border-b border-[smooth-gray]"></div>
 
     <!-- Menu Section -->
-    <section class="py-16">
-      <div class="flex justify-center items-center w-full">
+    <section>
+      <div class="flex justify-center items-center w-full relative">
         <svg
-          class="w-[600px] h-[600px] max-lg:w-[400px] max-lg:h-[400px] max-[500px]:w-[280px] max-[500px]:h-[280px]"
+          class="w-[600px] h-[620px] max-lg:w-[400px] max-lg:h-[420px] max-[500px]:w-[280px] max-[500px]:h-[300px]"
           viewBox="0 0 600 600"
         >
           <!-- 1️⃣ Clip path for circular image -->
           <defs>
             <clipPath id="circleClip">
               <!-- Image circle radius = 275px -->
-              <circle cx="300" cy="300" r="270" />
+              <circle cx="300" cy="300" r="250" />
             </clipPath>
           </defs>
 
@@ -275,21 +288,37 @@
             <path
               id="circlePath"
               d="M 300, 300
-           m -280, 0
-           a 280,280 0 1,1 560,0
-           a 280,280 0 1,1 -560,0"
+                 m -260, 0
+                 a 260,260 0 1,1 520,0
+                 a 260,260 0 1,1 -520,0"
             />
           </defs>
 
           <!-- 4️⃣ Text following the circle -->
-          <g transform="rotate(170,300,300)">
-            <text font-size="35" fill="#665B09">
-              <textPath href="#circlePath" startOffset="0">
-                香ばしさに満ち、やわらかな食感とやさしい味わい。温かくほっとする味わい。　香ばしさに満ち、やわらかな食感とやさしい味わい。温かくほっとする味わい。
+          <g
+            transform="rotate(170,280,280)"
+            class="animate-spin-slow origin-center"
+          >
+            <text
+              class="text-[35px] max-lg:text-[30px] max-[500px]:w-[25px]"
+              fill="#665B09"
+            >
+              <textPath
+                href="#circlePath"
+                startOffset="0"
+                class="tracking-[1.25px] max-lg:tracking-[6.25px]"
+              >
+                香ばしさに満ち、やわらかな味わいかな食く温と感しか懐かこ甘いしさやど、る残りに心がさわい。
               </textPath>
             </text>
           </g>
         </svg>
+        <div
+          class="absolute z-1 top-1/2 -translate-y-1/2 mt-[-1vw] text-center"
+        >
+          <div class="text-[30px]">MENU</div>
+          <div class="text-[40px]">メニュー</div>
+        </div>
       </div>
     </section>
 
