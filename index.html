@@ -248,27 +248,48 @@
 
     <!-- Menu Section -->
     <section class="py-16">
-      <div class="max-w-6xl mx-auto px-4">
-        <div class="text-center">
-          <div class="relative max-w-2xl mx-auto">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div
-                class="w-64 h-64 bg-light-gray rounded-full flex items-center justify-center"
-              >
-                <div class="text-center text-gray-500 text-sm">
-                  <p>MENU</p>
-                  <p>メニュー</p>
-                </div>
-              </div>
-            </div>
-            <div class="relative z-10 text-center">
-              <p class="text-gray-700 text-sm leading-relaxed max-w-xs mx-auto">
-                香ばしさに満ち、やわらかな食感とやさしい甘さが心に浸る、<br />
-                どこか懐かしく温かな味わい。
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="flex justify-center items-center w-full">
+        <svg
+          class="w-[600px] h-[600px] max-lg:w-[400px] max-lg:h-[400px] max-[500px]:w-[280px] max-[500px]:h-[280px]"
+          viewBox="0 0 600 600"
+        >
+          <!-- 1️⃣ Clip path for circular image -->
+          <defs>
+            <clipPath id="circleClip">
+              <!-- Image circle radius = 275px -->
+              <circle cx="300" cy="300" r="270" />
+            </clipPath>
+          </defs>
+
+          <!-- 2️⃣ Image -->
+          <image
+            href="./TempImage/6.jpg"
+            width="1000"
+            height="800"
+            clip-path="url(#circleClip)"
+            class="object-cover"
+          />
+
+          <!-- 3️⃣ Text path (radius 280px, 5px away from image) -->
+          <defs>
+            <path
+              id="circlePath"
+              d="M 300, 300
+           m -280, 0
+           a 280,280 0 1,1 560,0
+           a 280,280 0 1,1 -560,0"
+            />
+          </defs>
+
+          <!-- 4️⃣ Text following the circle -->
+          <g transform="rotate(170,300,300)">
+            <text font-size="35" fill="#665B09">
+              <textPath href="#circlePath" startOffset="0">
+                香ばしさに満ち、やわらかな食感とやさしい味わい。温かくほっとする味わい。　香ばしさに満ち、やわらかな食感とやさしい味わい。温かくほっとする味わい。
+              </textPath>
+            </text>
+          </g>
+        </svg>
       </div>
     </section>
 
