@@ -45,20 +45,20 @@
   <body class="bg-white text-nature-color font-Mincho">
     <!-- Main Navigation -->
     <nav
-      class="hidden md:block bg-white border-b border-[smooth-gray] sticky top-0 z-50"
+      class="hidden md:block bg-white border-b-[0.4px] border-smooth-gray sticky top-0 z-50"
     >
       <div>
         <div
-          class="hidden md:block absolute z-51 ml-[6vw] top-0 h-screen border-r border-[smooth-gray]"
+          class="hidden md:block absolute z-51 ml-[6vw] top-0 h-screen border-r-[0.4px] border-smooth-gray"
         ></div>
         <div
-          class="hidden md:block right-0 absolute z-51 mr-[6vw] top-0 h-screen border-l border-[smooth-gray]"
+          class="hidden md:block right-0 absolute z-51 mr-[6vw] top-0 h-screen border-l-[0.4px] border-smooth-gray"
         ></div>
         <div
-          class="md:hidden absolute h-full z-51 ml-[25vw] border-r border-[smooth-gray]"
+          class="md:hidden absolute h-full z-51 ml-[25vw] border-r-[0.4px] border-smooth-gray"
         ></div>
         <div
-          class="md:hidden absolute right-0 h-full z-51 mr-[25vw] border-r border-[smooth-gray]"
+          class="md:hidden absolute right-0 h-full z-51 mr-[25vw] border-r-[0.4px] border-smooth-gray"
         ></div>
       </div>
 
@@ -120,28 +120,124 @@
 
     <!--title-->
     <div
-      class="text-[50px] md:text-[106px] leading-[35px] md:leading-[165px] flex justify-center my-[123px]"
+      class="text-[50px] md:text-[106px] leading-[35px] md:leading-[165px] flex justify-center mt-[153px] my-[123px]"
     >
       お知らせ
     </div>
-    <div
-      class="border-smooth-gray border-b-[0.4px] w-[70vw] flex mx-auto"
-    ></div>
-    <div class="w-[70vw] flex mx-auto md:mt-[50px] mt-[40px]" id="NoticeBoard">
-      <div class="grid grid-cols-7">
-        <div class="text-[15px] leading-[40px]">2025.9.10</div>
+    <div class="w-[70vw] mx-auto" id="NoticeBoard">
+      <div
+        class="border-smooth-gray border-b-[0.4px] w-full md:mb-[50px] mb-[40px]"
+      ></div>
+      <div class="w-full grid grid-cols-7">
         <div
-          class="text-[13px] leading-[40px] py-[4px] px-[8px] border-smooth-gray"
-        ></div>
+          class="text-[15px] leading-[40px] max-md:col-span-2 max-[425px]:col-span-3"
+        >
+          2025.9.10
+        </div>
+        <div class="text-[13px] mt-[5px] max-md:col-span-2">
+          <div
+            class="py-[4px] px-[4px] w-fit border-smooth-gray border-[0.4px]"
+          >
+            お知らせ
+          </div>
+        </div>
+        <div class="hidden md:block md:col-span-5 text-[17px] leading-[40px]">
+          新規料理サービス開始
+        </div>
+      </div>
+      <div class="md:hidden text-[17px] leading-[40px] mt-[10px]">
+        新規料理サービス開始
+      </div>
+      <div
+        class="border-smooth-gray border-b-[0.4px] w-full md:my-[50px] my-[40px]"
+      ></div>
+      <div class="w-full grid grid-cols-7">
+        <div
+          class="text-[15px] leading-[40px] max-md:col-span-2 max-[425px]:col-span-3"
+        >
+          2025.8.5
+        </div>
+        <div class="text-[13px] mt-[5px] max-md:col-span-2">
+          <div
+            class="py-[4px] px-[4px] w-fit border-smooth-gray border-[0.4px]"
+          >
+            お知らせ
+          </div>
+        </div>
+        <div class="hidden md:block md:col-span-5 text-[17px] leading-[40px]">
+          このたび、2025年8月5日にGrand Openさせていただくことになりました。
+          皆さまのお越しをお待ち申し上げております。
+        </div>
+      </div>
+      <div class="md:hidden text-[17px] leading-[40px] mt-[10px]">
+        このたび、2025年8月5日にGrand Openさせていただくことになりました。
+        皆さまのお越しをお待ち申し上げております。
+      </div>
+      <div
+        class="border-smooth-gray border-b-[0.4px] w-full md:my-[50px] my-[40px]"
+      ></div>
+
+      <div class="w-full grid grid-cols-7">
+        <div
+          class="text-[15px] leading-[40px] max-md:col-span-2 max-[425px]:col-span-3"
+        >
+          2025.8.1
+        </div>
+        <div class="text-[13px] mt-[5px] max-md:col-span-2">
+          <div
+            class="py-[4px] px-[4px] w-fit border-smooth-gray border-[0.4px]"
+          >
+            お知らせ
+          </div>
+        </div>
+        <div class="hidden md:block md:col-span-5 text-[17px] leading-[40px]">
+          新規料理サービス開始
+        </div>
+      </div>
+      <div class="md:hidden text-[17px] leading-[40px] mt-[10px]">
+        新規料理サービス開始
+      </div>
+      <div
+        class="border-smooth-gray border-b-[0.4px] w-full md:mt-[50px] mt-[40px]"
+      ></div>
+
+      <div class="flex justify-center mt-[70px]" id="PageButton">
+        <button
+          class="w-[25px] h-[25px] border-[0.4px] border-[#665B09] flex justify-center items-center text-[10px] mx-[7px] hover:bg-[#665B09]/20 transition-colors duration-300"
+        >
+          &lt;&lt;
+        </button>
+        <button
+          class="w-[25px] h-[25px] border-[0.4px] border-[#665B09] flex justify-center items-center text-[10px] mx-[7px] hover:bg-[#665B09]/20 transition-colors duration-300"
+        >
+          &lt;
+        </button>
+        <button
+          class="w-[25px] h-[25px] border-[0.4px] border-[#665B09] flex justify-center items-center text-[10px] mx-[7px] bg-[#665B09] text-white hover:bg-[#665B09]/80 transition-colors duration-300"
+        >
+          1
+        </button>
+        <button
+          class="w-[25px] h-[25px] border-[0.4px] border-[#665B09] flex justify-center items-center text-[10px] mx-[7px] hover:bg-[#665B09]/20 transition-colors duration-300"
+        >
+          &gt;
+        </button>
+        <button
+          class="w-[25px] h-[25px] border-[0.4px] border-[#665B09] flex justify-center items-center text-[10px] mx-[7px] hover:bg-[#665B09]/20 transition-colors duration-300"
+        >
+          &gt;&gt;
+        </button>
       </div>
     </div>
+
+    <div class="my-[60px] border-b-[0.4px] border-smooth-gray"></div>
     <!-- Footer -->
     <footer class="mx-[6vw] grid md:grid-cols-3 grid-cols-1">
       <div class="border-[smooth-gray] md:border-r">
         <img src=".././logo.png" alt="Logo" class="w-full h-[265px]" />
 
-        <div class="grid grid-cols-6 mt-[60px]">
-          <div></div>
+        <div class="grid grid-cols-8 mt-[60px]">
+          <div class="col-span-2"></div>
           <div class="flex justify-center">
             <img src=".././facebook.png" alt="facebook" />
           </div>
@@ -154,7 +250,7 @@
           <div class="flex justify-center">
             <img src=".././Vector.png" alt="Twitter" />
           </div>
-          <div></div>
+          <div class="col-span-2"></div>
         </div>
         <div class="border-b md:hidden border-[smooth-gray] my-[30px]"></div>
       </div>
