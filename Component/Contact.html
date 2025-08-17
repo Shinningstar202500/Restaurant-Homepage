@@ -45,31 +45,26 @@
       .nav-button {
         transition: all 0.3s ease;
         cursor: pointer;
-        border: none;
+
+        border: transparent;
         background: transparent;
         padding: 8px 16px;
         border-radius: 4px;
       }
 
       .nav-button:hover {
-        background-color: #665b09;
-        color: white;
+        border: 1px solid #665b09;
       }
 
       .footer-button {
         transition: all 0.3s ease;
         cursor: pointer;
-        border: none;
-        background: transparent;
+
+        border: transparent;
         padding: 4px 8px;
         border-radius: 4px;
         text-align: left;
         width: 100%;
-      }
-
-      .footer-button:hover {
-        background-color: #665b09;
-        color: white;
       }
     </style>
   </head>
@@ -83,7 +78,7 @@
           class="hidden md:block absolute z-51 ml-[6vw] top-0 h-screen border-r-[0.4px] border-smooth-gray"
         ></div>
         <div
-          class="hidden md:block right-0 absolute z-51 mr-[6vw] top-0 h-screen border-l-[0.4px] border-smooth-gray"
+          class="hidden md:block right-0 absolute z-51 mr-[6vw] top-0 h-screen border-l border-smooth-gray"
         ></div>
         <div
           class="md:hidden absolute h-full z-51 ml-[25vw] border-r-[0.4px] border-smooth-gray"
@@ -96,97 +91,163 @@
       <div
         class="ml-[7vw] grid grid-cols-8 mr-[7vw] py-[22px] text-[12px] leading-[20px] lg:text-[16px]"
       >
-        <button
-          class="nav-button flex justify-center items-center"
-          onclick="window.location.href='Notice.html'"
-        >
-          お知らせ
-        </button>
-        <button
-          class="nav-button flex justify-center items-center"
-          onclick="window.open('https://toreta.in', '_blank')"
-        >
-          ご予約
-        </button>
-        <button
-          class="nav-button flex justify-center items-center"
-          onclick="window.location.href='Menu.html'"
-        >
-          メニュー
-        </button>
-        <div class="flex justify-center items-center col-span-2">
+        <p class="p-[3px] flex justify-center items-center">
           <button
             class="nav-button"
-            onclick="window.location.href='../index.html'"
-            style="background: transparent; border: none; padding: 0"
+            onclick="window.location.href='Notice.html'"
           >
-            <p
-              class="text-[20px] leading-[30px] text-center lg:text-[26px] lg:leading-[36px]"
-            >
-              森のビュッフェ <br />
-              <span class="tracking-[20px]">SUN</span>
-            </p>
+            お知らせ
           </button>
+        </p>
+        <p class="p-[3px] flex justify-center items-center">
+          <button
+            class="nav-button flex justify-center items-center"
+            onclick="window.open('https://toreta.in', '_blank')"
+          >
+            ご予約
+          </button>
+        </p>
+        <p class="p-[3px] flex justify-center items-center">
+          <button
+            class="nav-button flex justify-center items-center"
+            onclick="window.location.href='Menu.html'"
+          >
+            メニュー
+          </button>
+        </p>
+        <div
+          class="flex justify-center items-center col-span-2 hover: cursor-pointer"
+          onclick=" window.location.href='./index.html'"
+        >
+          <p
+            class="text-[20px] leading-[30px] text-center lg:text-[26px] lg:leading-[36px]"
+          >
+            森のビュッフェ <br />
+            <span class="tracking-[20px]">SUN</span>
+          </p>
         </div>
-
-        <button
-          class="nav-button flex justify-center items-center"
-          onclick="window.location.href='Infor.html'"
-        >
-          店舗情報
-        </button>
-        <button
-          class="nav-button flex justify-center items-center"
-          onclick="window.location.href='Inside.html'"
-        >
-          店内案内
-        </button>
-        <button
-          class="nav-button flex justify-center items-center"
-          onclick="window.location.href='Contact.html'"
-        >
-          お問い合わせ
-        </button>
+        <p class="p-[3px] flex justify-center items-center">
+          <button
+            class="nav-button flex justify-center items-center"
+            onclick="window.location.href='Infor.html'"
+          >
+            店舗情報
+          </button>
+        </p>
+        <p class="p-[3px] flex justify-center items-center">
+          <button
+            class="nav-button flex justify-center items-center"
+            onclick="window.location.href='Inside.html'"
+          >
+            店内案内
+          </button>
+        </p>
+        <p class="p-[3px] flex justify-center items-center">
+          <button
+            class="nav-button flex justify-center items-center"
+            onclick="window.location.href='Contact.html'"
+          >
+            お問い合わせ
+          </button>
+        </p>
       </div>
     </nav>
     <nav
-      class="md:hidden bg-white border-b border-[smooth-gray] sticky top-0 z-50 grid grid-cols-4"
+      class="md:hidden bg-white border-b-[0.4px] border-smooth-gray sticky top-0 z-50 grid grid-cols-4 relative"
     >
+      <!-- Left -->
       <div
-        class="flex items-center justify-center border-r border-[smooth-gray]"
+        class="flex items-center justify-center border-r-[0.4px] border-smooth-gray"
       >
-        <button
-          class="nav-button text-[12px]"
-          onclick="window.open('https://toreta.in', '_blank')"
-        >
-          ご予約
-        </button>
+        <p class="p-[3px] flex justify-center items-center">
+          <button
+            class="nav-button text-[12px]"
+            onclick="window.open('https://toreta.in', '_blank')"
+          >
+            ご予約
+          </button>
+        </p>
       </div>
 
+      <!-- Center -->
       <div class="flex justify-center items-center col-span-2 py-[15px]">
         <p class="text-[12px] leading-[20px] text-center">
           森のビュッフェ <br />
           <span class="tracking-[9px]">SUN</span>
         </p>
       </div>
-      <div
-        class="flex justify-center items-center border-l border-[smooth-gray]"
-      >
-        <button>
-          <svg
-            class="w-12 h-12"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="0.6"
-              d="M1 10h44M1 15h44"
-            />
-          </svg>
+
+      <!-- Right Hamburger -->
+      <div class="flex justify-center items-center border-l border-smooth-gray">
+        <button
+          id="menu-btn"
+          class="relative w-20 h-12 flex flex-col justify-center items-center group"
+        >
+          <span
+            class="block w-[44px] h-[1px] bg-gray-800 mb-1 transition-transform duration-300 origin-center group-[.open]:rotate-45 group-[.open]:translate-y-[3.2px] group-[.open]:skew-x-5"
+          ></span>
+
+          <span
+            class="block w-[44px] h-[1px] bg-gray-800 transition-transform duration-300 origin-center group-[.open]:-rotate-45 group-[.open]:-translate-y-[3.2px] group-[.open]:-skew-x-5"
+          ></span>
         </button>
+      </div>
+
+      <!-- Dropdown -->
+      <div
+        id="dropdown"
+        class="hidden absolute right-0 mt-[71px] z-50 w-1/2 bg-gray-200 overflow-hidden max-h-0 transition-all duration-500 ease-in-out"
+      >
+        <div
+          class="p-[3px] flex justify-center items-center h-[50px] mt-[10px]"
+        >
+          <button
+            class="nav-button"
+            onclick="window.location.href='Notice.html'"
+          >
+            お知らせ
+          </button>
+        </div>
+        <div
+          class="p-[3px] flex justify-center items-center h-[50px] mt-[10px]"
+        >
+          <button
+            class="nav-button flex justify-center items-center"
+            onclick="window.location.href='Menu.html'"
+          >
+            メニュー
+          </button>
+        </div>
+        <div
+          class="p-[3px] flex justify-center items-center h-[50px] mt-[10px]"
+        >
+          <button
+            class="nav-button flex justify-center items-center"
+            onclick="window.location.href='Infor.html'"
+          >
+            店舗情報
+          </button>
+        </div>
+        <div
+          class="p-[3px] flex justify-center items-center h-[50px] mt-[10px]"
+        >
+          <button
+            class="nav-button flex justify-center items-center"
+            onclick="window.location.href='Inside.html'"
+          >
+            店内案内
+          </button>
+        </div>
+        <div
+          class="p-[3px] flex justify-center items-center h-[50px] my-[10px]"
+        >
+          <button
+            class="nav-button flex justify-center items-center"
+            onclick="window.location.href='Contact.html'"
+          >
+            お問い合わせ
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -295,29 +356,31 @@
     <div class="my-[60px] border-b-[0.4px] border-smooth-gray"></div>
     <!-- Footer -->
     <footer class="mx-[6vw] grid md:grid-cols-3 grid-cols-1">
-      <div class="border-[smooth-gray] md:border-r">
-        <img src=".././logo.png" alt="Logo" class="w-full h-[265px]" />
+      <div class="border-smooth-gray md:border-r-[0.4px]">
+        <img src="../logo.png" alt="Logo" class="w-full h-[265px]" />
 
         <div class="grid grid-cols-8 mt-[60px]">
           <div class="col-span-2"></div>
           <div class="flex justify-center">
-            <img src=".././facebook.png" alt="facebook" />
+            <img src="../facebook.png" alt="facebook" />
           </div>
           <div class="flex justify-center">
-            <img src=".././Group 31.png" alt="Instagram" />
+            <img src="../Group 31.png" alt="Instagram" />
           </div>
           <div class="flex justify-center">
-            <img src=".././Subtract.png" alt="Youtube" />
+            <img src="../Subtract.png" alt="Youtube" />
           </div>
           <div class="flex justify-center">
-            <img src=".././Vector.png" alt="Twitter" />
+            <img src="../Vector.png" alt="Twitter" />
           </div>
           <div class="col-span-2"></div>
         </div>
-        <div class="border-b md:hidden border-[smooth-gray] my-[30px]"></div>
+        <div
+          class="border-b-[0.4px] md:hidden border-smooth-gray my-[30px]"
+        ></div>
       </div>
 
-      <div class="grid grid-cols-8 border-[smooth-gray] md:border-r">
+      <div class="grid grid-cols-8 border-smooth-gray md:border-r-[0.4px]">
         <div></div>
         <div class="col-span-7 text-[15px] leading-[40px] md:mt-[50px]">
           <p class="text-[17px] leading-[30px]">森のビュッフェSUN</p>
@@ -347,18 +410,22 @@
           </div>
         </div>
       </div>
-      <div class="border-b md:hidden border-[smooth-gray] my-[30px]"></div>
+      <div
+        class="border-b-[0.4px] md:hidden border-smooth-gray my-[30px]"
+      ></div>
       <div class="grid grid-cols-8">
         <div></div>
         <div class="col-span-7 text-[15px] leading-[40px] md:mt-[50px]">
           <p class="text-[17px] leading-[30px]">トップページ</p>
           <div class="ml-[1.5vw] mt-[20px]">
-            <button
-              class="footer-button"
-              onclick="window.open('https://toreta.in', '_blank')"
-            >
-              ご予約
-            </button>
+            <p class="p-[2px]">
+              <button
+                class="footer-button"
+                onclick="window.open('https://toreta.in', '_blank')"
+              >
+                ご予約
+              </button>
+            </p>
             <button
               class="footer-button"
               onclick="window.location.href='Menu.html'"
@@ -393,9 +460,9 @@
         </div>
       </div>
     </footer>
-    <div class="border-b border-[smooth-gray] w-full my-[60px]"></div>
+    <div class="border-b-[0.4px] border-smooth-gray w-full my-[60px]"></div>
     <div class="mt-[20px] relative w-full justify-center flex">
-      <img src=".././lift.png" alt="lift" class="absolute bottom-0" />
+      <img src="../lift.png" alt="lift" class="absolute bottom-0" />
     </div>
     <section class="flex justify-center mb-[60px] text-[15px] leading-[25px]">
       2025森のビュッフェSUN.all rights reserved.
@@ -440,6 +507,31 @@
           top: 0,
           behavior: "smooth",
         });
+      });
+
+      const menuBtn = document.getElementById("menu-btn");
+      const dropdown = document.getElementById("dropdown");
+
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("open");
+
+        if (dropdown.classList.contains("hidden")) {
+          // Opening the dropdown
+          dropdown.classList.remove("hidden");
+          dropdown.style.maxHeight = "0px";
+          // Force a reflow to ensure the transition works
+          dropdown.offsetHeight;
+          dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+        } else {
+          // Closing the dropdown
+          dropdown.style.maxHeight = "0px";
+          // Wait for the transition to complete before hiding
+          setTimeout(() => {
+            if (dropdown.style.maxHeight === "0px") {
+              dropdown.classList.add("hidden");
+            }
+          }, 500); // Match the transition duration
+        }
       });
     </script>
   </body>
