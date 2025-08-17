@@ -40,6 +40,37 @@
       .animate-spin-slow {
         animation: spin-slow 40s linear infinite;
       }
+
+      /* Navigation button hover effects */
+      .nav-button {
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        padding: 8px 16px;
+        border-radius: 4px;
+      }
+
+      .nav-button:hover {
+        background-color: #665b09;
+        color: white;
+      }
+
+      .footer-button {
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        padding: 4px 8px;
+        border-radius: 4px;
+        text-align: left;
+        width: 100%;
+      }
+
+      .footer-button:hover {
+        background-color: #665b09;
+        color: white;
+      }
     </style>
   </head>
   <body class="bg-white text-nature-color font-Mincho">
@@ -65,21 +96,57 @@
       <div
         class="ml-[7vw] grid grid-cols-8 mr-[7vw] py-[22px] text-[12px] leading-[20px] lg:text-[16px]"
       >
-        <div class="flex justify-center items-center">お知らせ</div>
-        <div class="flex justify-center items-center">ご予約</div>
-        <div class="flex justify-center items-center">メニュー</div>
+        <button
+          class="nav-button flex justify-center items-center"
+          onclick="window.location.href='Notice.html'"
+        >
+          お知らせ
+        </button>
+        <button
+          class="nav-button flex justify-center items-center"
+          onclick="window.open('https://toreta.in', '_blank')"
+        >
+          ご予約
+        </button>
+        <button
+          class="nav-button flex justify-center items-center"
+          onclick="window.location.href='Menu.html'"
+        >
+          メニュー
+        </button>
         <div class="flex justify-center items-center col-span-2">
-          <p
-            class="text-[20px] leading-[30px] text-center lg:text-[26px] lg:leading-[36px]"
+          <button
+            class="nav-button"
+            onclick="window.location.href='../index.html'"
+            style="background: transparent; border: none; padding: 0"
           >
-            森のビュッフェ <br />
-            <span class="tracking-[20px]">SUN</span>
-          </p>
+            <p
+              class="text-[20px] leading-[30px] text-center lg:text-[26px] lg:leading-[36px]"
+            >
+              森のビュッフェ <br />
+              <span class="tracking-[20px]">SUN</span>
+            </p>
+          </button>
         </div>
 
-        <div class="flex justify-center items-center">店舗情報</div>
-        <div class="flex justify-center items-center">店内案内</div>
-        <div class="flex justify-center items-center">お問い合わせ</div>
+        <button
+          class="nav-button flex justify-center items-center"
+          onclick="window.location.href='Infor.html'"
+        >
+          店舗情報
+        </button>
+        <button
+          class="nav-button flex justify-center items-center"
+          onclick="window.location.href='Inside.html'"
+        >
+          店内案内
+        </button>
+        <button
+          class="nav-button flex justify-center items-center"
+          onclick="window.location.href='Contact.html'"
+        >
+          お問い合わせ
+        </button>
       </div>
     </nav>
     <nav
@@ -88,7 +155,12 @@
       <div
         class="flex items-center justify-center border-r border-[smooth-gray]"
       >
-        <button class="text-[12px]">ご予約</button>
+        <button
+          class="nav-button text-[12px]"
+          onclick="window.open('https://toreta.in', '_blank')"
+        >
+          ご予約
+        </button>
       </div>
 
       <div class="flex justify-center items-center col-span-2 py-[15px]">
@@ -291,12 +363,42 @@
         <div class="col-span-7 text-[15px] leading-[40px] md:mt-[50px]">
           <p class="text-[17px] leading-[30px]">トップページ</p>
           <div class="ml-[1.5vw] mt-[20px]">
-            <div>ご予約</div>
-            <div>メニュー</div>
-            <div>店舗情報</div>
-            <div>ご予約</div>
-            <div>店内案内</div>
-            <div>お問い合わせ</div>
+            <button
+              class="footer-button"
+              onclick="window.open('https://toreta.in', '_blank')"
+            >
+              ご予約
+            </button>
+            <button
+              class="footer-button"
+              onclick="window.location.href='Menu.html'"
+            >
+              メニュー
+            </button>
+            <button
+              class="footer-button"
+              onclick="window.location.href='Infor.html'"
+            >
+              店舗情報
+            </button>
+            <button
+              class="footer-button"
+              onclick="window.location.href='Notice.html'"
+            >
+              お知らせ
+            </button>
+            <button
+              class="footer-button"
+              onclick="window.location.href='Inside.html'"
+            >
+              店内案内
+            </button>
+            <button
+              class="footer-button"
+              onclick="window.location.href='Contact.html'"
+            >
+              お問い合わせ
+            </button>
           </div>
         </div>
       </div>
