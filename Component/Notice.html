@@ -71,8 +71,7 @@
   <body class="bg-white text-nature-color font-Mincho">
     <!-- Main Navigation -->
     <nav
-      id="navbar1"
-      class="hidden md:block bg-white border-b-[0.4px] border-smooth-gray sticky top-0 z-50 transition-opacity duration-500"
+      class="hidden md:block bg-white border-b-[0.4px] border-smooth-gray sticky top-0 z-50"
     >
       <div>
         <div
@@ -153,9 +152,11 @@
             店内案内
           </button>
         </p>
-        <p class="p-[3px] flex justify-center items-center">
+        <p
+          class="p-[3px] flex justify-center items-center whitespace-nowrap tracking-tight"
+        >
           <button
-            class="nav-button flex justify-center items-center whitespace-nowrap tracking-tight"
+            class="nav-button flex justify-center items-center"
             onclick="window.location.href='Contact.html'"
           >
             お問い合わせ
@@ -165,7 +166,6 @@
     </nav>
     <nav
       class="md:hidden bg-white border-b-[0.4px] border-smooth-gray sticky top-0 z-50 grid grid-cols-4 relative"
-      id="navbar1"
     >
       <!-- Left -->
       <div
@@ -379,7 +379,6 @@
     </div>
 
     <div class="my-[60px] border-b-[0.4px] border-smooth-gray"></div>
-
     <!-- Footer -->
     <footer class="mx-[6vw] grid md:grid-cols-3 grid-cols-1">
       <div class="border-smooth-gray md:border-r-[0.4px]">
@@ -387,28 +386,16 @@
 
         <div class="grid grid-cols-8 mt-[60px]">
           <div class="col-span-2"></div>
-          <div
-            class="flex justify-center cursor-pointer hover:scale-125 duration-300"
-            onclick="window.open('https://facebook.com', '_blank')"
-          >
+          <div class="flex justify-center">
             <img src="../facebook.png" alt="facebook" />
           </div>
-          <div
-            class="flex justify-center cursor-pointer hover:scale-125 duration-300"
-            onclick="window.open('https://facebook.com', '_blank')"
-          >
+          <div class="flex justify-center">
             <img src="../Group 31.png" alt="Instagram" />
           </div>
-          <div
-            class="flex justify-center cursor-pointer hover:scale-125 duration-300"
-            onclick="window.open('https://facebook.com', '_blank')"
-          >
+          <div class="flex justify-center">
             <img src="../Subtract.png" alt="Youtube" />
           </div>
-          <div
-            class="flex justify-center cursor-pointer hover:scale-125 duration-300"
-            onclick="window.open('https://facebook.com', '_blank')"
-          >
+          <div class="flex justify-center">
             <img src="../Vector.png" alt="Twitter" />
           </div>
           <div class="col-span-2"></div>
@@ -456,20 +443,14 @@
         <div class="col-span-7 text-[15px] leading-[40px] md:mt-[50px]">
           <p class="text-[17px] leading-[30px]">トップページ</p>
           <div class="ml-[1.5vw] mt-[20px]">
-            <button
-              class="footer-button"
-              onclick="window.location.href='Notice.html'"
-            >
-              お知らせ
-            </button>
-
-            <button
-              class="footer-button"
-              onclick="window.open('https://toreta.in', '_blank')"
-            >
-              ご予約
-            </button>
-
+            <p class="p-[2px]">
+              <button
+                class="footer-button"
+                onclick="window.open('https://toreta.in', '_blank')"
+              >
+                ご予約
+              </button>
+            </p>
             <button
               class="footer-button"
               onclick="window.location.href='Menu.html'"
@@ -482,7 +463,12 @@
             >
               店舗情報
             </button>
-
+            <button
+              class="footer-button"
+              onclick="window.location.href='Notice.html'"
+            >
+              お知らせ
+            </button>
             <button
               class="footer-button"
               onclick="window.location.href='Inside.html'"
@@ -501,7 +487,7 @@
     </footer>
     <div class="border-b-[0.4px] border-smooth-gray w-full my-[60px]"></div>
     <div class="mt-[20px] relative w-full justify-center flex">
-      <img src="./lift.png" alt="lift" class="absolute bottom-0" />
+      <img src="../lift.png" alt="lift" class="absolute bottom-0" />
     </div>
     <section class="flex justify-center mb-[60px] text-[15px] leading-[25px]">
       2025森のビュッフェSUN.all rights reserved.
@@ -548,27 +534,6 @@
         });
       });
 
-      const Navbar1 = document.getElementById("navbar1");
-
-      console.log("Navbar1 = ", Navbar1);
-
-      window.addEventListener("scroll", () => {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const windowHeight = window.innerHeight;
-        const fullHeight = document.documentElement.scrollHeight;
-
-        // Distance from bottom
-        const distanceFromBottom = fullHeight - (scrollTop + windowHeight);
-        console.log(distanceFromBottom, "-------------------");
-
-        if (distanceFromBottom <= 540) {
-          Navbar1.style.opacity = "0";
-          document.getElementById("navbar2").style.opacity = "0";
-        } else {
-          Navbar1.style.opacity = "1";
-          document.getElementById("navbar2").style.opacity = "100";
-        }
-      });
       const menuBtn = document.getElementById("menu-btn");
       const dropdown = document.getElementById("dropdown");
 
