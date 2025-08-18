@@ -5,113 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>森のビュッフェ SUN</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              Mincho: ["DFHSMincho-W5", "Ms mincho"],
-            },
-            colors: {
-              "forest-green": "#4A7C59",
-              "warm-gold": "#D4AF37",
-              "soft-gray": "#6B7280",
-              "light-gray": "#E5E7EB",
-              "dark-brown": "#5D4037",
-              "smooth-gray": "#969494",
-              "nature-color": "#665B09",
-            },
-            gridTemplateColumns: {
-              20: "repeat(20, minmax(0, 1fr))",
-            },
-          },
-        },
-      };
-    </script>
-    <style>
-      @keyframes spin-slow {
-        0% {
-          transform: rotate(170deg);
-        }
-        100% {
-          transform: rotate(530deg);
-        }
-      }
-      .animate-spin-slow {
-        animation: spin-slow 40s linear infinite;
-      }
-
-      @keyframes scalePulse {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(0.9);
-        }
-      }
-      .animate-scale {
-        animation: scalePulse 3s infinite ease-in-out;
-      }
-      /* Navigation button hover effects */
-      .nav-button {
-        transition: all 0.3s ease;
-        cursor: pointer;
-
-        border: transparent;
-        background: transparent;
-        padding: 8px 16px;
-        border-radius: 4px;
-      }
-
-      .nav-button:hover {
-        border: 1px solid #665b09;
-      }
-
-      .footer-button {
-        transition: all 0.3s ease;
-        cursor: pointer;
-
-        border: transparent;
-        padding: 4px 8px;
-        border-radius: 4px;
-        text-align: left;
-        width: 100%;
-      }
-
-      .circle-loader {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) scale(0);
-        width: 200vmax;
-        height: 200vmax;
-        background: #2f5d3a; /* forest green */
-        border-radius: 50%;
-        z-index: 50;
-        animation: circle-reveal 1.8s ease-out forwards;
-      }
-
-      @keyframes circle-reveal {
-        0% {
-          transform: translate(-50%, -50%) scale(0);
-          opacity: 1;
-        }
-        100% {
-          transform: translate(-50%, -50%) scale(1);
-          opacity: 0;
-        }
-      }
-
-      /* Page fade-in */
-      .fade-in {
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
-      }
-      .fade-in.show {
-        opacity: 1;
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body class="bg-white text-nature-color font-Mincho">
     <div id="loader" class="circle-loader"></div>
@@ -140,36 +35,39 @@
         <div
           class="ml-[7vw] grid grid-cols-8 mr-[7vw] py-[22px] text-[12px] leading-[20px] lg:text-[16px]"
         >
-          <p
-            class="p-[3px] flex justify-center items-center whitespace-nowrap tracking-tight"
+          <button
+            class="flex justify-center items-center"
+            onclick="window.location.href='Component/Notice.html' "
           >
-            <button
-              class="nav-button"
-              onclick="window.location.href='Component/Notice.html'"
+            <p
+              class="m-[3px] whitespace-nowrap tracking-tight nav-button w-fit"
             >
               お知らせ
-            </button>
-          </p>
-          <p
-            class="p-[3px] flex justify-center items-center whitespace-nowrap tracking-tight"
+            </p>
+          </button>
+
+          <button
+            class="flex justify-center items-center"
+            onclick="window.open('https://toreta.in', '_blank')"
           >
-            <button
-              class="nav-button flex justify-center items-center"
-              onclick="window.open('https://toreta.in', '_blank')"
+            <p
+              class="m-[3px] whitespace-nowrap tracking-tight nav-button w-fit"
             >
               ご予約
-            </button>
-          </p>
-          <p
-            class="p-[3px] flex justify-center items-center whitespace-nowrap tracking-tight"
+            </p>
+          </button>
+
+          <button
+            class="flex justify-center items-center"
+            onclick="window.location.href='Component/Menu.html'"
           >
-            <button
-              class="nav-button flex justify-center items-center"
-              onclick="window.location.href='Component/Menu.html'"
+            <p
+              class="m-[3px] whitespace-nowrap tracking-tight nav-button w-fit"
             >
               メニュー
-            </button>
-          </p>
+            </p>
+          </button>
+
           <div
             class="flex justify-center items-center col-span-2 hover: cursor-pointer"
           >
@@ -180,34 +78,37 @@
               <span class="tracking-[20px]">SUN</span>
             </p>
           </div>
-          <p
-            class="p-[3px] flex justify-center items-center whitespace-nowrap tracking-tight"
+
+          <button
+            class="flex justify-center items-center"
+            onclick="window.location.href='Component/Infor.html'"
           >
-            <button
-              class="nav-button flex justify-center items-center"
-              onclick="window.location.href='Component/Infor.html'"
+            <p
+              class="m-[3px] whitespace-nowrap tracking-tight nav-button w-fit"
             >
               店舗情報
-            </button>
-          </p>
-          <p
-            class="p-[3px] flex justify-center items-center whitespace-nowrap tracking-tight"
+            </p>
+          </button>
+          <button
+            class="flex justify-center items-center"
+            onclick="window.location.href='Component/Inside.html'"
           >
-            <button
-              class="nav-button flex justify-center items-center"
-              onclick="window.location.href='Component/Inside.html'"
+            <p
+              class="m-[3px] whitespace-nowrap tracking-tight nav-button w-fit"
             >
               店内案内
-            </button>
-          </p>
-          <p class="p-[3px] flex justify-center items-center">
-            <button
-              class="nav-button flex justify-center items-center whitespace-nowrap tracking-tight"
-              onclick="window.location.href='Component/Contact.html'"
+            </p>
+          </button>
+          <button
+            class="flex justify-center items-center"
+            onclick="window.location.href='Component/Contact.html'"
+          >
+            <p
+              class="m-[3px] whitespace-nowrap tracking-tight nav-button w-fit"
             >
               お問い合わせ
-            </button>
-          </p>
+            </p>
+          </button>
         </div>
       </nav>
       <nav
@@ -730,27 +631,43 @@
             <div class="col-span-2"></div>
             <div
               class="flex justify-center cursor-pointer hover:scale-125 duration-300"
-              onclick="window.open('https://facebook.com', '_blank')"
             >
-              <img src="./facebook.png" alt="facebook" />
+              <a href="https://x.com/yourhandle" target="_blank" aria-label="X">
+                <img src="./X.png" alt="facebook" />
+              </a>
             </div>
             <div
               class="flex justify-center cursor-pointer hover:scale-125 duration-300"
-              onclick="window.open('https://facebook.com', '_blank')"
             >
-              <img src="./Group 31.png" alt="Instagram" />
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                aria-label="Instagram"
+              >
+                <img src="./Instagram.png" alt="facebook" />
+              </a>
             </div>
             <div
               class="flex justify-center cursor-pointer hover:scale-125 duration-300"
-              onclick="window.open('https://facebook.com', '_blank')"
             >
-              <img src="./Subtract.png" alt="Youtube" />
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                aria-label="YouTube"
+              >
+                <img src="./Youtube.png" alt="facebook" />
+              </a>
             </div>
             <div
               class="flex justify-center cursor-pointer hover:scale-125 duration-300"
-              onclick="window.open('https://facebook.com', '_blank')"
             >
-              <img src="./Vector.png" alt="Twitter" />
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                aria-label="facebook"
+              >
+                <img src="./FaceBook.png" alt="facebook" />
+              </a>
             </div>
             <div class="col-span-2"></div>
           </div>
@@ -870,80 +787,6 @@
         </svg>
       </button>
     </div>
-    <script>
-      window.addEventListener("load", () => {
-        const loader = document.getElementById("loader");
-        const mainPage = document.getElementById("mainPage");
-
-        setTimeout(() => {
-          loader.style.display = "none";
-          mainPage.classList.add("show");
-        }, 0); // match animation duration
-      });
-
-      // Scroll to top functionality
-      const scrollToTopBtn = document.getElementById("scrollToTop");
-
-      window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 300) {
-          scrollToTopBtn.style.opacity = "1";
-        } else {
-          scrollToTopBtn.style.opacity = "0";
-        }
-      });
-
-      scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      });
-
-      const Navbar1 = document.getElementById("navbar1");
-
-      console.log("Navbar1 = ", Navbar1);
-
-      window.addEventListener("scroll", () => {
-        const scrollTop = window.scrollY || document.documentElement.scrollTop;
-        const windowHeight = window.innerHeight;
-        const fullHeight = document.documentElement.scrollHeight;
-
-        // Distance from bottom
-        const distanceFromBottom = fullHeight - (scrollTop + windowHeight);
-        console.log(distanceFromBottom, "-------------------");
-
-        if (distanceFromBottom <= 540) {
-          Navbar1.style.opacity = "0";
-          document.getElementById("navbar2").style.opacity = "0";
-        } else {
-          Navbar1.style.opacity = "1";
-          document.getElementById("navbar2").style.opacity = "100";
-        }
-      });
-      const menuBtn = document.getElementById("menu-btn");
-      const dropdown = document.getElementById("dropdown");
-
-      menuBtn.addEventListener("click", () => {
-        menuBtn.classList.toggle("open");
-
-        if (dropdown.classList.contains("hidden")) {
-          // Opening the dropdown
-          dropdown.classList.remove("hidden");
-          dropdown.style.maxHeight = "0px";
-          // Force a reflow to ensure the transition works
-          dropdown.offsetHeight;
-          dropdown.style.maxHeight = dropdown.scrollHeight + "px";
-        } else {
-          // Closing the dropdown
-          dropdown.style.maxHeight = "0px";
-          // Wait for the transition to complete before hiding
-          setTimeout(() => {
-            if (dropdown.style.maxHeight === "0px") {
-              dropdown.classList.add("hidden");
-            }
-          }, 500); // Match the transition duration
-        }
-      });
-    </script>
+    <script src="./script.js"></script>
   </body>
 </html>

@@ -1,0 +1,100 @@
+/* Common Animations */
+@keyframes spin-slow {
+  0% {
+    transform: rotate(170deg);
+  }
+  100% {
+    transform: rotate(530deg);
+  }
+}
+.animate-spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
+
+@keyframes scalePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+}
+.animate-scale {
+  animation: scalePulse 3s infinite ease-in-out;
+}
+
+/* Navigation button hover effects */
+.nav-button {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: transparent;
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+.nav-button:hover {
+  border: 1px solid #665b09;
+}
+
+.footer-button {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: transparent;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: left;
+  width: 100%;
+}
+
+/* Loader used on index */
+.circle-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 200vmax;
+  height: 200vmax;
+  background: #2f5d3a; /* forest green */
+  border-radius: 50%;
+  z-index: 50;
+  animation: circle-reveal 1.8s ease-out forwards;
+}
+@keyframes circle-reveal {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+
+/* Page fade-in container */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.fade-in.show {
+  opacity: 1;
+}
+
+/* Legacy door animation helpers (safe to keep if referenced) */
+.door-open-left {
+  transform: translateX(-100%);
+}
+.door-open-right {
+  transform: translateX(100%);
+}
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.hidden-content {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+.show-content {
+  opacity: 1;
+}
