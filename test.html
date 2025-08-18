@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Buffet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Door panels */
+      .door-panel {
+        transition: transform 1.2s ease-in-out;
+      }
+      .door-left.open {
+        transform: translateX(-100%);
+      }
+      .door-right.open {
+        transform: translateX(100%);
+      }
+
+      /* Circle fade for images */
+      .reveal-img {
+        opacity: 0;
+        clip-path: circle(0% at 50% 50%);
+        transition: clip-path 1.2s ease-out, opacity 1.2s ease-out;
+      }
+      .reveal-img.visible {
+        opacity: 1;
+        clip-path: circle(150% at 50% 50%);
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Door loader -->
+    <div id="doorLoader" class="fixed inset-0 flex z-50">
+      <div class="door-panel door-left bg-green-900 w-1/2 h-full"></div>
+      <div class="door-panel door-right bg-green-900 w-1/2 h-full"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="mainContent" class="hidden">
+      <header class="text-center py-10">
+        <h1 class="text-4xl font-bold text-green-800">Forest Buffet</h1>
+        <p class="text-lg text-gray-600">Experience nature in every dish</p>
+      </header>
+
+      <main class="space-y-20 px-6">
+        <section>
+          <img
+            src="https://picsum.photos/800/400?random=1"
+            alt="Buffet Dish"
+            class="reveal-img w-full rounded-2xl shadow-lg"
+          />
+        </section>
+        <section>
+          <img
+            src="https://picsum.photos/800/400?random=2"
+            alt="Buffet Dish"
+            class="reveal-img w-full rounded-2xl shadow-lg"
+          />
+        </section>
+        <section>
+          <img
+            src="https://picsum.photos/800/400?random=3"
+            alt="Buffet Dish"
+            class="reveal-img w-full rounded-2xl shadow-lg"
+          />
+        </section>
+      </main>
+    </div>
+
+    <script>
+      // Door opening on load
+      window.addEventListener("load", () => {
+        const left = document.querySelector(".door-left");
+        const right = document.querySelector(".door-right");
+        const loader = document.getElementById("doorLoader");
+        const main = document.getElementById("mainContent");
+
+        setTimeout(() => {
+          left.classList.add("open");
+          right.classList.add("open");
+        }, 500);
+
+        setTimeout(() => {
+          loader.style.display = "none";
+          main.classList.remove("hidden");
+        }, 2000);
+      });
+
+      // Image circle fade in/out depending on viewport
+      const images = document.querySelectorAll(".reveal-img");
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible"); // fade in
+            } else {
+              entry.target.classList.remove("visible"); // fade out
+            }
+          });
+        },
+        { threshold: 0.4 } // adjust sensitivity
+      );
+      images.forEach((img) => observer.observe(img));
+    </script>
+  </body>
+</html>
