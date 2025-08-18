@@ -318,7 +318,11 @@
               <div id="hero_content2">新規料理サービス開始 ...</div>
             </div>
           </div>
-          <div class="text-[13px] leading-[25px]">もっと見る →</div>
+          <button class="text-[13px] leading-[25px]">
+            <p class="nav-button h-[30px] w-[120px] flex items-center">
+              もっと見る →
+            </p>
+          </button>
         </div>
 
         <div class="right-0 text-right lg:mr-[10vw] md:mr-[6vw] xl:mr-[16.8vw]">
@@ -348,7 +352,10 @@
                 <div id="hero_content2">新規料理サービス開始 ...</div>
               </div>
             </div>
-            <button class="text-[13px] leading-[25px] mt-2">
+            <button
+              class="text-[13px] leading-[25px] mt-2"
+              onclick="window.location.href='Component/Notice.html'"
+            >
               もっと見る →
             </button>
           </div>
@@ -403,7 +410,9 @@
         <div class="text-[17px] leading-[25px] md:mt-[60px] mt-[40px]">
           24時間TORETAでご予約いただけます。
         </div>
-        <button class="text-[15px] leading-[25px] md:mt-[60px] mt-[40px]">
+        <button
+          class="nav-button h-[47px] w-[120px] text-[15px] leading-[25px] md:mt-[60px] mt-[40px]"
+        >
           予約する →
         </button>
       </div>
@@ -415,8 +424,9 @@
     <section>
       <div class="flex justify-center items-center w-full relative">
         <svg
-          class="w-[800px] h-[800px] max-2xl:w-[600px] max-2xl:h-[620px] max-lg:w-[400px] max-lg:h-[420px] max-[500px]:w-[280px] max-[500px]:h-[300px] group"
+          class="cursor-pointer w-[800px] h-[800px] max-2xl:w-[600px] max-2xl:h-[620px] max-lg:w-[400px] max-lg:h-[420px] max-[500px]:w-[280px] max-[500px]:h-[300px] group"
           viewBox="0 0 600 600"
+          onclick="window.location.href='Component/Menu.html'"
         >
           <!-- 1️⃣ Clip path for circular image -->
           <defs>
@@ -524,7 +534,10 @@
           <div class="">:</div>
           <div class="ml-2">約50席</div>
         </div>
-        <button class="text-[15px] leading-[25px] md:mt-[60px] mt-[40px]">
+        <button
+          class="nav-button h-[47px] w-[132px] text-[15px] leading-[25px] md:mt-[60px] mt-[40px]"
+          onclick="window.location.href='Component/Infor.html'"
+        >
           もっと見る →
         </button>
       </div>
@@ -564,7 +577,10 @@
         <div class="text-[17px] leading-[25px] md:mt-[60px] mt-[40px]">
           白と木目が織り成す、自然のぬくもりに包まれた落ち着きの空間
         </div>
-        <button class="text-[15px] leading-[25px] md:mt-[60px] mt-[40px]">
+        <button
+          class="nav-button h-[47px] w-[132px] text-[15px] leading-[25px] md:mt-[60px] mt-[40px]"
+          onclick="window.location.href='Component/Inside.html'"
+        >
           もっと見る →
         </button>
       </div>
@@ -612,8 +628,11 @@
           <div class="">:</div>
           <div class="ml-2">example@test.com</div>
         </div>
-        <button class="text-[15px] leading-[25px] md:mt-[60px] mt-[40px]">
-          もっと見る →
+        <button
+          class="nav-button h-[47px] w-[130px] text-[15px] leading-[25px] md:mt-[60px] mt-[40px] whitespace-nowrap tracking-tight"
+          onclick="window.location.href='Component/Contact.html'"
+        >
+          お問い合わせ →
         </button>
       </div>
       <div class="max-md:hidden overflow-hidden">
@@ -659,16 +678,28 @@
 
         <div class="grid grid-cols-8 mt-[60px]">
           <div class="col-span-2"></div>
-          <div class="flex justify-center">
+          <div
+            class="flex justify-center cursor-pointer hover:scale-125 duration-300"
+            onclick="window.open('https://facebook.com', '_blank')"
+          >
             <img src="./facebook.png" alt="facebook" />
           </div>
-          <div class="flex justify-center">
+          <div
+            class="flex justify-center cursor-pointer hover:scale-125 duration-300"
+            onclick="window.open('https://facebook.com', '_blank')"
+          >
             <img src="./Group 31.png" alt="Instagram" />
           </div>
-          <div class="flex justify-center">
+          <div
+            class="flex justify-center cursor-pointer hover:scale-125 duration-300"
+            onclick="window.open('https://facebook.com', '_blank')"
+          >
             <img src="./Subtract.png" alt="Youtube" />
           </div>
-          <div class="flex justify-center">
+          <div
+            class="flex justify-center cursor-pointer hover:scale-125 duration-300"
+            onclick="window.open('https://facebook.com', '_blank')"
+          >
             <img src="./Vector.png" alt="Twitter" />
           </div>
           <div class="col-span-2"></div>
@@ -716,14 +747,20 @@
         <div class="col-span-7 text-[15px] leading-[40px] md:mt-[50px]">
           <p class="text-[17px] leading-[30px]">トップページ</p>
           <div class="ml-[1.5vw] mt-[20px]">
-            <p class="p-[2px]">
-              <button
-                class="footer-button"
-                onclick="window.open('https://toreta.in', '_blank')"
-              >
-                ご予約
-              </button>
-            </p>
+            <button
+              class="footer-button"
+              onclick="window.location.href='Component/Notice.html'"
+            >
+              お知らせ
+            </button>
+
+            <button
+              class="footer-button"
+              onclick="window.open('https://toreta.in', '_blank')"
+            >
+              ご予約
+            </button>
+
             <button
               class="footer-button"
               onclick="window.location.href='Component/Menu.html'"
@@ -736,12 +773,7 @@
             >
               店舗情報
             </button>
-            <button
-              class="footer-button"
-              onclick="window.location.href='Component/Notice.html'"
-            >
-              お知らせ
-            </button>
+
             <button
               class="footer-button"
               onclick="window.location.href='Component/Inside.html'"
