@@ -71,7 +71,8 @@
   <body class="bg-white text-nature-color font-Mincho">
     <!-- Main Navigation -->
     <nav
-      class="hidden md:block bg-white border-b-[0.4px] border-smooth-gray sticky top-0 z-50"
+      id="navbar1"
+      class="hidden md:block bg-white border-b-[0.4px] border-smooth-gray sticky top-0 z-50 transition-opacity duration-500"
     >
       <div>
         <div
@@ -164,6 +165,7 @@
     </nav>
     <nav
       class="md:hidden bg-white border-b-[0.4px] border-smooth-gray sticky top-0 z-50 grid grid-cols-4 relative"
+      id="navbar1"
     >
       <!-- Left -->
       <div
@@ -390,7 +392,7 @@
       </div>
 
       <div
-        class="w-[70vw] mx-auto md:mt-[130px] md:ml-[4.51vw] [@media(min-width:768px)_and_(max-width:1023px)]:mt-[80px]"
+        class="max-md:w-[70vw] max-md:mx-auto md:mt-[130px] md:ml-[4.51vw] [@media(min-width:768px)_and_(max-width:1023px)]:mt-[80px]"
       >
         <div class="text-[15px] leading-[20px]">RESERVATION</div>
         <div
@@ -492,7 +494,7 @@
         ></div>
       </div>
       <div
-        class="w-[70vw] mx-auto md:ml-[4.51vw] md:border-r-[0.4px] border-smooth-gray"
+        class="max-md:w-[70vw] max-md:mx-auto md:ml-[4.51vw] md:border-r-[0.4px] border-smooth-gray"
       >
         <div
           class="md:mt-[130px] text-[15px] leading-[20px] [@media(min-width:768px)_and_(max-width:1023px)]:mt-[80px]"
@@ -551,7 +553,7 @@
       </div>
 
       <div
-        class="w-[70vw] mx-auto md:mt-[130px] md:ml-[4.51vw] [@media(min-width:768px)_and_(max-width:1023px)]:mt-[80px]"
+        class="max-md:w-[70vw] max-md:mx-auto md:mt-[130px] md:ml-[4.51vw] [@media(min-width:768px)_and_(max-width:1023px)]:mt-[80px]"
       >
         <div class="text-[15px] leading-[20px]">INSIDE</div>
         <div
@@ -583,7 +585,7 @@
         ></div>
       </div>
       <div
-        class="w-[70vw] mx-auto md:ml-[4.51vw] md:border-r-[0.4px] border-smooth-gray"
+        class="max-md:w-[70vw] max-md:mx-auto md:ml-[4.51vw] md:border-r-[0.4px] border-smooth-gray"
       >
         <div
           class="md:mt-[130px] text-[15px] leading-[20px] [@media(min-width:768px)_and_(max-width:1023px)]:mt-[80px]"
@@ -805,6 +807,27 @@
         });
       });
 
+      const Navbar1 = document.getElementById("navbar1");
+
+      console.log("Navbar1 = ", Navbar1);
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight;
+        const fullHeight = document.documentElement.scrollHeight;
+
+        // Distance from bottom
+        const distanceFromBottom = fullHeight - (scrollTop + windowHeight);
+        console.log(distanceFromBottom, "-------------------");
+
+        if (distanceFromBottom <= 540) {
+          Navbar1.style.opacity = "0";
+          document.getElementById("navbar2").style.opacity = "0";
+        } else {
+          Navbar1.style.opacity = "1";
+          document.getElementById("navbar2").style.opacity = "100";
+        }
+      });
       const menuBtn = document.getElementById("menu-btn");
       const dropdown = document.getElementById("dropdown");
 
