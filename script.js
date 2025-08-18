@@ -24,16 +24,6 @@ if (typeof tailwind !== "undefined") {
 }
 
 // Page loader reveal for index (no-ops on other pages)
-window.addEventListener("load", () => {
-  const loader = document.getElementById("loader");
-  const mainPage = document.getElementById("mainPage");
-  if (loader && mainPage) {
-    setTimeout(() => {
-      loader.style.display = "none";
-      mainPage.classList.add("show");
-    }, 0);
-  }
-});
 
 // Scroll to top functionality
 (() => {
