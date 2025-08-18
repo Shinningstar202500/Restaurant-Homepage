@@ -325,7 +325,140 @@
 
       <div class="my-[60px] border-b-[0.4px] border-smooth-gray"></div>
       <!-- Footer -->
-      <div id="footer"></div>
+      <footer class="mx-[6vw] grid md:grid-cols-3 grid-cols-1">
+        <div class="border-smooth-gray md:border-r-[0.4px]">
+          <img src="../logo.png" alt="Logo" class="w-full h-[265px]" />
+
+          <div class="grid grid-cols-8 mt-[60px]">
+            <div class="col-span-2"></div>
+            <div class="flex justify-center">
+              <img src="../facebook.png" alt="facebook" />
+            </div>
+            <div class="flex justify-center">
+              <img src="../Group 31.png" alt="Instagram" />
+            </div>
+            <div class="flex justify-center">
+              <img src="../Subtract.png" alt="Youtube" />
+            </div>
+            <div class="flex justify-center">
+              <img src="../Vector.png" alt="Twitter" />
+            </div>
+            <div class="col-span-2"></div>
+          </div>
+          <div
+            class="border-b-[0.4px] md:hidden border-smooth-gray my-[30px]"
+          ></div>
+        </div>
+
+        <div class="grid grid-cols-8 border-smooth-gray md:border-r-[0.4px]">
+          <div></div>
+          <div class="col-span-7 text-[15px] leading-[40px] md:mt-[50px]">
+            <p class="text-[17px] leading-[30px]">森のビュッフェSUN</p>
+            <div class="ml-[1.5vw] mt-[20px]">
+              <div class="flex">
+                <p>住所</p>
+                <p class="ml-[9px]">:</p>
+                <p class="ml-[10px]">
+                  〒880-0834<br />
+                  宮崎県宮崎市<span
+                    class="leading-[0px] text-[0px] min-[375px]:hidden md:block min-[1120px]:hidden"
+                    ><br /></span
+                  >新別府町前浜<br />
+                  1401-224
+                </p>
+              </div>
+              <div class="flex">
+                <p>電話</p>
+                <p class="ml-[9px]">:</p>
+                <p class="ml-[10px]">0745-23-4567</p>
+              </div>
+              <div class="flex">
+                <p>メール</p>
+                <p class="">:</p>
+                <p class="ml-[5px]">example@test.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-b-[0.4px] md:hidden border-smooth-gray my-[30px]"
+        ></div>
+        <div class="grid grid-cols-8">
+          <div></div>
+          <div class="col-span-7 text-[15px] leading-[40px] md:mt-[50px]">
+            <p class="text-[17px] leading-[30px]">トップページ</p>
+            <div class="ml-[1.5vw] mt-[20px]">
+              <p class="p-[2px]">
+                <button
+                  class="footer-button"
+                  onclick="window.open('https://toreta.in', '_blank')"
+                >
+                  ご予約
+                </button>
+              </p>
+              <button
+                class="footer-button"
+                onclick="window.location.href='Menu.html'"
+              >
+                メニュー
+              </button>
+              <button
+                class="footer-button"
+                onclick="window.location.href='Infor.html'"
+              >
+                店舗情報
+              </button>
+              <button
+                class="footer-button"
+                onclick="window.location.href='Notice.html'"
+              >
+                お知らせ
+              </button>
+              <button
+                class="footer-button"
+                onclick="window.location.href='Inside.html'"
+              >
+                店内案内
+              </button>
+              <button
+                class="footer-button"
+                onclick="window.location.href='Contact.html'"
+              >
+                お問い合わせ
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <div class="border-b-[0.4px] border-smooth-gray w-full my-[60px]"></div>
+      <div class="mt-[20px] relative w-full justify-center flex">
+        <img src="../lift.png" alt="lift" class="absolute bottom-0" />
+      </div>
+      <section class="flex justify-center mb-[60px] text-[15px] leading-[25px]">
+        2025森のビュッフェSUN.all rights reserved.
+      </section>
+
+      <!-- Scroll to Top Button -->
+      <button
+        id="scrollToTop"
+        class="fixed bottom-8 right-2 text-white p-3 rounded-full opacity-0 transition-opacity duration-300 hover:bg-gray-300"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="-40 0 180 100"
+        >
+          <polyline
+            points="-40,100 50,0 140,100"
+            fill="none"
+            stroke="#666633"
+            stroke-width="4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
     </div>
     <script>
       window.addEventListener("load", () => {
