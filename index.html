@@ -6,6 +6,56 @@
     <title>森のビュッフェ SUN</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./style.css" />
+    <style>
+      /* Common Animations */
+      @keyframes spin-slow {
+        0% {
+          transform: rotate(170deg);
+        }
+        100% {
+          transform: rotate(530deg);
+        }
+      }
+      .animate-spin-slow {
+        animation: spin-slow 40s linear infinite;
+      }
+
+      @keyframes scalePulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.9);
+        }
+      }
+      .animate-scale {
+        animation: scalePulse 3s infinite ease-in-out;
+      }
+
+      /* Navigation button hover effects */
+      .nav-button {
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: transparent;
+        background: transparent;
+        padding: 8px 16px;
+        border-radius: 4px;
+      }
+      .nav-button:hover {
+        border: 1px solid #665b09;
+      }
+
+      .footer-button {
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border: transparent;
+        padding: 4px 8px;
+        border-radius: 4px;
+        text-align: left;
+        width: 100%;
+      }
+    </style>
     <script src="./script.js" defer></script>
   </head>
   <body class="bg-white text-nature-color font-Mincho">
