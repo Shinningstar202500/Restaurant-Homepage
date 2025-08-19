@@ -52,10 +52,12 @@ if (typeof tailwind !== "undefined") {
     const fullHeight = document.documentElement.scrollHeight;
     const distanceFromBottom = fullHeight - (scrollTop + windowHeight);
     if (distanceFromBottom <= 540) {
-      navbar1.style.opacity = "0";
+      navbar1.style.hidden = "0";
+
       if (navbar2) navbar2.style.opacity = "0";
     } else {
       navbar1.style.opacity = "1";
+
       if (navbar2) navbar2.style.opacity = "100";
     }
   });
